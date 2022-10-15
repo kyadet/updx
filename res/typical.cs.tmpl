@@ -1,0 +1,53 @@
+//------------------------------------------------------------------------------
+// <copyright file="typical.cs.tmpl" company="FurtherSystem Co.,Ltd.">
+// Copyright (C) 2022 FurtherSystem Co.,Ltd. All rights reserved.
+// This software is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+// </copyright>
+// <author>FurtherSystem Co.,Ltd.</author>
+// <email>info@furthersystem.com</email>
+// <summary>
+// Typical Updater - template source code
+// </summary>
+//------------------------------------------------------------------------------
+using System;
+using System.IO;
+using System.Diagnostics;
+namespace Com.FurtherSystems.updx.runtime
+{
+  public class TypicalUpdater
+  {
+    public static void Main(string[] args)
+    {
+      //Console.WriteLine("UPDX_STATIC_REPLACE_KEYWORD::name");
+      //Console.WriteLine("UPDX_STATIC_REPLACE_KEYWORD::adminSourceWindowsIcon");
+      //Console.WriteLine("UPDX_STATIC_REPLACE_KEYWORD::adminSourceWindowsAssembly");
+      //Console.ReadKey();
+
+      // change directory.
+      var fullPathFileName = Process.GetCurrentProcess().MainModule.FileName;
+      var fullPath = Path.GetDirectoryName(fullPathFileName);
+      Directory.SetCurrentDirectory(fullPath);
+
+      // mode typical, disp launcher.
+      Console.WriteLine("UPDX_STATIC_REPLACE_KEYWORD::mode");
+      // check network ... dialog
+      Console.WriteLine("check network UPDX_STATIC_REPLACE_KEYWORD::rootEndpoint");
+      // check file ... dialog
+      Console.WriteLine("check file UPDX_STATIC_REPLACE_KEYWORD::rootEndpoint");
+
+      // compare
+      Console.WriteLine("compare");
+      //    new install
+      //    update
+      //    file check failed.
+      //    maintenance check failed.
+      Console.WriteLine("new install or update");
+
+      var p = new Process();
+      p.StartInfo.FileName = "UPDX_STATIC_REPLACE_KEYWORD::adminSourceWindowsAssembly";
+      p.StartInfo.Arguments = "UPDX_STATIC_REPLACE_KEYWORD::adminSourceWindowsArguments";
+      var result = p.Start();
+    }
+  }
+}

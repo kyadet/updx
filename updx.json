@@ -1,0 +1,40 @@
+{
+  "name": "SampleApplication",
+  "root_endpoint": "https://updx.com",
+  "mode": "typical",
+  "failback_policy": "prohibited|before",
+  "admin": {
+    "require_version": 1.0,
+    "source": {
+      "version": 1,
+      "windows": {
+        "directory": "release_win/1.0/SampleApplicationPath",
+        "icon": "release_win/1.0/icon.ico",
+        "assembly": "sampleapp.exe",
+        "arguments": "",
+        "updater": "sampleapp_launcher.exe"
+      },
+      "macos": {
+        "directory": "release_mac/1.0/SampleApplicationPath",
+        "icon": "release_mac/1.0/icon.ico",
+        "assembly": "sampleapp",
+        "arguments": "",
+        "updater": "sampleapp_launcher"
+      },
+      "linux": {
+        "directory": "release_lin/1.0/SampleApplicationPath",
+        "icon": "release_lin/1.0/icon.ico",
+        "assembly": "sampleapp",
+        "arguments": "",
+        "updater": "sampleapp_launcher"
+      }
+    },
+    "destination": {
+      "url": "endpoint",
+      "type": "scp",
+      "auth": "interactive",
+      "auth_user": "",
+      "auth_pass": ""
+    }
+  }
+}
