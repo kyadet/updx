@@ -1,4 +1,4 @@
-# updx - light weight updater ... multiplatform pc package distribution manager with transparency
+# updx - light weight updater ... multiplatform pc package distribution manager with transparency.
 ![alt text](https://github.com/kyadet/updx/blob/main/logo.png?raw=true)
 
 Feature
