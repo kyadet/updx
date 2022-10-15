@@ -1,0 +1,7 @@
+bin/*
+
+.DS_Store
+Thumbs.db
+~$*
+~
+Session.vim
